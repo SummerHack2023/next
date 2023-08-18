@@ -1,7 +1,5 @@
 import BoardList from "../components/board/BoardList";
 import { connectDB } from "/util/database.js";
-import { authOptions } from "@/pages/api/auth/[...nextauth].js"
-import { getServerSession } from "next-auth"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";

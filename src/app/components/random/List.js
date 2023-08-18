@@ -1,15 +1,15 @@
-import styles from "./List.module.css";
+import styles from "public/css/List.module.css";
 
-const List = () => {
+const List = ({key, classname, classnumber, professor, deadline, recruits, participants}) => {
   return (
     <div className={`${styles.list} text-[15px] flex justify-between items-center`}>
       <div>
-        <div className="font-medium">과목명 / 분반</div>
-        <div className="text-[13px]">교수님</div>
-        <div className={`${styles.deadline}`}>2023.08.20</div>
+        <div className="font-medium">{`${classname} / ${classnumber}`}</div>
+        <div className="text-[13px]">{professor}</div>
+        <div className={`${styles.deadline}`}>{deadline}</div>
       </div>
       <div className="flex">
-        <div className="mr-[10px]">참여인원 / 구인인원</div>
+        <div className="mr-[10px]">{`${participants} / ${recruits}`}</div>
         <div>참가하기</div>
       </div>
     </div>

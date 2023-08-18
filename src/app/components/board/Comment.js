@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "public/css/Comment.module.css";
 
-const Comment = ({data, session}) => {
+const Comment = ({ data, session }) => {
   return (
     <div className={`${styles.comment} relative`}>
       <div className="flex items-center mb-1">
@@ -13,30 +13,30 @@ const Comment = ({data, session}) => {
         />
         <div className={`${styles.commentWriter}`}>{data.author}</div>
         {session.user.name === data.author ? (
-                  <button
-                  className={`${styles.deleteBtn}`}
-                    onClick={async () => {
-                      try {
-                        const response = await fetch("/api/boardDelete", {
-                          method: "DELETE",
-                          body: boardList._id,
-                        }).then((response) => {
-                          if (response.status === 302) {
-                            window.location.href = "/board";
-                          } else {
-                            console.log("삭제 실패");
-                          }
-                        });
-                      } catch (error) {
-                        console.log("fetch error", error);
-                      }
-                    }}
-                  >
-                    삭제
-                  </button>
-              ) : (
-                ""
-              )}
+          <button
+            className={`${styles.deleteBtn}`}
+            onClick={async () => {
+              try {
+                const response = await fetch("/api/boardDelete", {
+                  method: "DELETE",
+                  body: boardList._id,
+                }).then((response) => {
+                  if (response.status === 302) {
+                    window.location.href = "/board";
+                  } else {
+                    console.log("삭제 실패");
+                  }
+                });
+              } catch (error) {
+                console.log("fetch error", error);
+              }
+            }}
+          >
+            삭제
+          </button>
+        ) : (
+          ""
+        )}
       </div>
       <div className={`${styles.commentContent}`}>{data.content}</div>
       <div style={{ color: "#a6a6a6", fontSize: "12px" }}>{data.date}</div>

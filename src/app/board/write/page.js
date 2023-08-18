@@ -5,7 +5,7 @@ import "public/css/write.css";
 
 const Write = async () => {
   let date = new Date();
-  date = dayjs(date).format("YYYY.MM.DD")
+  date = dayjs(date).format("YYYY.MM.DD");
   const session = await getServerSession(authOptions);
   return (
     <div
@@ -42,11 +42,7 @@ const Write = async () => {
           name="writer"
           defaultValue={session.user.name}
         />
-        <input
-          style={{ display: "none" }}
-          name="date"
-          defaultValue={date}
-        />
+        <input style={{ display: "none" }} name="date" defaultValue={date} />
         <button type="submit" className="submitBtn">
           발행
         </button>
