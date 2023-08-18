@@ -8,8 +8,8 @@ export default function Post({ key, id, title, content, writer, date }) {
         <div className="title">{title}</div>
         <div className="content">{content}</div>
         <div className="etc flex flex-col">
-          <span>{date}</span>
           <span className="name">{writer}</span>
+          <span>{date}</span>
         </div>
       </div>
     </Link>
