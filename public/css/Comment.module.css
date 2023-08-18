@@ -1,0 +1,23 @@
+.comment {
+  width: 1000px;
+  padding: 20px;
+  border: 1px solid #d6d6d6;
+  margin: -1px 0 0 -1px;
+}
+
+.commentWriter {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.commentContent {
+  padding: 3px 0;
+  font-size: 15px;
+}
+
+.deleteBtn {
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  right: 20px;
+}

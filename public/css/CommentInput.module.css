@@ -1,0 +1,25 @@
+.commentInputDiv {
+  width: 100%;
+}
+
+.commentInput {
+  width: 950px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.commentAddDiv {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2d7fc;
+}
+
+.commentAddIcon {
+  width: 20px;
+  color: white
+}
