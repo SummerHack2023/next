@@ -17,12 +17,12 @@ const Comment = ({ data, session }) => {
             className={`${styles.deleteBtn}`}
             onClick={async () => {
               try {
-                const response = await fetch("/api/boardDelete", {
+                const response = await fetch("/api/commentDelete", {
                   method: "DELETE",
-                  body: boardList._id,
+                  body: data._id,
                 }).then((response) => {
                   if (response.status === 302) {
-                    window.location.href = "/board";
+                    console.log("삭제성공")
                   } else {
                     console.log("삭제 실패");
                   }
