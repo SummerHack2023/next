@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import styles from "public/css/Modal.module.css";
 
-const Modal = ({ closeModal }) => {
+const Modal = ({ closeModal, sessionName, sessionStudentId }) => {
   return (
     <div className={`${styles.background} flex items-center justify-center`}>
       <form
@@ -48,6 +48,13 @@ const Modal = ({ closeModal }) => {
           className={`${styles.input}`}
           name="participants"
           defaultValue={1}
+          style={{ display: "none" }}
+        />
+        <input
+          type="text"
+          className={`${styles.input}`}
+          name="session"
+          defaultValue={`${sessionName}, ${sessionStudentId}`}
           style={{ display: "none" }}
         />
         <div className="flex justify-center items-center mt-[25px]">
